@@ -29,6 +29,12 @@ return {
       lspconfig.html.setup({
         capabilities = capabilities
       })
+      lspconfig.ansiblels.setup({
+        capabilities = capabilities
+      })
+      lspconfig.bashls.setup({
+        capabilities = capabilities
+      })
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
