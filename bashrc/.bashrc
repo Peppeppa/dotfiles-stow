@@ -52,8 +52,6 @@ alias grep='grep --color=auto'
 
 alias vpon='wg-quick up v10Main'
 alias vpoff='wg-quick down v10Main'
-alias stow='stow -d ~/git/dotfiles/ . -t ~/'
-alias unstow='stow -D -d ~/git/dotfiles/ . -t ~/'
 alias bashrc='v ~/.bashrc'
 alias rlbash='source ~/.bashrc'
 alias v='nvim'
