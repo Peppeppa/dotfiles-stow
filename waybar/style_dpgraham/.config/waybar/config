@@ -1,7 +1,7 @@
 {
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock", "idle_inhibitor"],
-    "modules-right": ["tray", "custom/scratchpad-indicator", "network", "pulseaudio", "battery", "custom/power"],
+    "modules-right": ["custom/updates", "tray", "custom/scratchpad-indicator", "network", "pulseaudio", "battery", "custom/power"],
 
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -19,6 +19,18 @@
             "activated": "",
             "deactivated": ""
         },
+    },
+
+    "custom/updates": {
+        "format": "  {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",       
+        "exec": "~/.config/scripts/updates.sh",
+        "restart-interval": 60,
+        "on-click": "alacritty --class dotfiles-floating -e ~/.config/scripts/installupdates.sh",
+        "on-click-right": "~/.config/.settings/software.sh",
+        "tooltip": false
     },
     "tray": {
         "icon-size": 15,
