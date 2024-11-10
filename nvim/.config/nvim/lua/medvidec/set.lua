@@ -28,5 +28,18 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
-vim.opt.clipboard = unnamedplus
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.clipboard = {
+  name = "wl-clipboard",
+  copy = {
+    ["+"] = "wl-copy",
+    ["*"] = "wl-copy",
+  },
+  paste = {
+    ["+"] = "wl-paste --no-newline",
+    ["'"] = "wl-paste --no-newline",
+  },
+}
+
+  
 

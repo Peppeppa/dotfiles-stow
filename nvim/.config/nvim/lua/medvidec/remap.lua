@@ -30,3 +30,12 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+
+
+-- copy
+-- Kopiere in das Clipboard mit Strg+c (wie in anderen Anwendungen)
+vim.keymap.set("v", "<C-c>", '"+y', { noremap = true, silent = true })
+
+-- Füge aus dem Clipboard mit Strg+v ein (im normalen Modus)
+vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })
+
