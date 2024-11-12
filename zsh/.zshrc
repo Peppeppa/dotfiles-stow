@@ -51,17 +51,21 @@ setopt appendhistory
 
 #	movement
 #
-alias cl='clear && ls -ahl --color=auto'
+alias cl='clear && eza -ahl' #--color=auto'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
 alias c='clear && neofetch'
-alias ls='ls --color=auto'
-alias ll='ls -ahl --color=auto'
+alias ls='eza' #ls --color=auto'
+alias ll='eza -hl' #--color=auto'
+alias la='eza -ahl' #--color=auto'
 cdd() {
-    cd "$1" && clear && ls -ahl --color=auto
+    cd "$1" && clear && eza -ahl --color=auto
 }
-
-alias grep='grep --color=auto'
+if command -v bat > /dev/null; then
+  alias cat='bat'
+elif command -v batcat > /dev/null; then
+  alias cat='batcat'
+fi
 
 
 #	systemalias
