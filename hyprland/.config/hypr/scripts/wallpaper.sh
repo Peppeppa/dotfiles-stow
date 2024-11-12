@@ -22,7 +22,7 @@ blur=$(cat $blur_file)
 # Create cache file if not exists
 if [ ! -f $cache_file ] ;then
     touch $cache_file
-    echo "$HOME/wallpaper/default.jpg" > "$cache_file"
+    echo "$HOME/git/wallpaper/default.jpg" > "$cache_file"
 fi
 
 # Create rasi file if not exists
@@ -102,7 +102,7 @@ magick $wallpaper -resize 75% $blurred
 echo ":: Resized to 75%"
 if [ ! "$blur" == "0x0" ] ;then
     magick $blurred -blur $blur $blurred
-    echo ":: Blurred"
+    echo ":: Blurred 
 fi
 
 

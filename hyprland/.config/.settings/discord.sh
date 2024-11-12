@@ -1,2 +1,2 @@
-chromium --app=https://discord.com/channels/@me
+thorium-browser --app=https://discord.com/channels/@me
 
