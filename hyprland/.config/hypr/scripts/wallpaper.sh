@@ -79,7 +79,7 @@ newwall=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 # ----------------------------------------------------- 
 # Reload waybar with new colors
 # -----------------------------------------------------
-~/.config/waybar/launchwaybar.sh
+~/.config/waybar/waybar_launch.sh #launchwaybar.sh
 
 # ----------------------------------------------------- 
 # Set the new wallpaper

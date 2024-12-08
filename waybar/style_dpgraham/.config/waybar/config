@@ -1,7 +1,7 @@
 {
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["hyprland/workspaces", "sway/mode"],
     "modules-center": ["clock", "idle_inhibitor"],
-    "modules-right": ["custom/updates", "tray", "custom/scratchpad-indicator", "network", "pulseaudio", "battery", "custom/power"],
+    "modules-right": ["tray", "custom/scratchpad-indicator", "network", "pulseaudio", "battery", "custom/power"],
 
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -19,6 +19,18 @@
             "activated": "",
             "deactivated": ""
         },
+    },
+
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
     },
 
     "custom/updates": {
