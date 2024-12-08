@@ -63,7 +63,7 @@ alias rlbash='source ~/.bashrc'
 alias v='nvim'
 alias r='ranger'
 alias y='yazi'
-alias z='sudo zypper'
+alias zy='sudo zypper'
 
 
 #	Git
