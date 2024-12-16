@@ -81,3 +81,6 @@ alias gf='~/.config/scripts/git-flow-stow.sh'
 
 #PS1='[\u@\h \W]\$ '
 PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)'; PS1='\n[\D{%a %d %b} - \A] \w \n[\u@\h] ${PS1_CMD1}: '
+
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/.go/bin
