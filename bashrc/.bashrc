@@ -22,6 +22,10 @@ neofetch
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#export PATH="/opt/intellij:$PATH"
+#export JAVA_HOME="/opt/intellij/idea-IC-243.22562.218"
+#export IDEA_JDK="/opt/intellij/idea-IC-243.22562.218"
+
 
 #----------------------------------
 # █████╗ ██╗     ██╗ █████╗ ███████╗
