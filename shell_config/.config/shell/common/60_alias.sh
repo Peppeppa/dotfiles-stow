@@ -20,7 +20,7 @@ fi
 
 alias repos='cd $REPOS'
 alias dot='cd $DOTFILES'
-alias scripts'cd $SCRIPTS'
+alias scripts='cd $SCRIPTS'
 
 
 
