@@ -17,7 +17,7 @@ load_shell_config () {
 
   for file in "$CONFIG_DIR/common/"*.sh "$SHELL_DIR/"*.sh; do
     source "$file"
-    echo "✅ Lade: $file"
+   # echo "✅ Lade: $file"
   done
 }
 
