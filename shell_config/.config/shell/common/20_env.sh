@@ -12,4 +12,4 @@ export VISUAL=nvim
 export REPOS="$HOME/git"
 export DOTFILES="$REPOS/dotfiles-stow"
 export SCRIPTS="$REPOS/scripts"
-
+export DOTCONFIG="$HOME/.config"

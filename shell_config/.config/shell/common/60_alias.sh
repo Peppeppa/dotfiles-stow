@@ -21,7 +21,7 @@ fi
 alias repos='cd $REPOS'
 alias dot='cd $DOTFILES'
 alias scripts='cd $SCRIPTS'
-
+alias conf='cd $DOTCONFIG'
 
 
 
