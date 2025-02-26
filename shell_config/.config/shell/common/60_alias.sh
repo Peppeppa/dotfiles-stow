@@ -26,11 +26,9 @@ alias conf='cd $DOTCONFIG'
 
 
 #	systemalias
-
-alias bashrc='v ~/.bashrc'
-alias zshrc='v ~/.zshrc'
 alias rlbash='source ~/.bashrc'
 alias rlzsh='source ~/.zshrc'
+alias stow='stow -t ~'
 
 alias v='nvim'
 alias r='ranger'
