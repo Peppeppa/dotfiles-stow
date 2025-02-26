@@ -40,6 +40,3 @@ vim.opt.clipboard = {
     ["'"] = "wl-paste --no-newline",
   },
 }
-
-  
-
