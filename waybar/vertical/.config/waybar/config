@@ -1,154 +1,128 @@
+
 {
-    "output": "eDP-1",
-    "id": "top",
-    "height": "0px",
-    "margin": "0px 0px 0p 0px",
-    "name": "top",
-    "layer": "top",
-    "position": "right",
-    "modules-right": [ "sway/scratchpad", "sway/mode", "tray", "custom/containers", "custom/vm", "disk", "memory", "cpu", "network", "pulseaudio", "backlight", "battery", "idle_inhibitor", "custom/bluelightfilter", ],
-    "modules-center": [ "custom/notification" ],
-    "modules-left": ["clock", "sway/workspaces"],
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "alphabetical_sort": true
+  "output": "eDP-1",
+  "layer": "top",
+  "position": "right",
+  "width": 28,
+  "margin": "2 0 2 2",
+  "spacing": 2,
+  "modules-left": [
+    "clock",
+    "custom/sep",
+    "idle_inhibitor",
+    "custom/sep",
+    "custom/notification",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "custom/bluetooth_devices",
+    "custom/sep",
+    "pulseaudio",
+    "custom/sep",
+    "network",
+    "custom/sep",
+  	"battery",
+    "custom/powermenu"
+  ],
+  "custom/sep": {
+    //    "format": "──"
+    "format": ""
+  },
+  "custom/powermenu": {
+    "on-click": "wlogout",
+    "format": "",
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
     },
-    "clock#utc": {
-        "format": "{:%H:%M UTC}",
-        "timezone": "Etc/UTC",
-        "on-click": "swaync-client -t -sw",
+  },
+
+  "network": {
+      "format-wifi": "",
+      "format-ethernet": "",
+      "format-disconnected": "", 
+      "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+      "tooltip-format-wifi": "{ipaddr} via {gwaddr} ({signalStrength}%) ",
+      "tooltip-format-ethernet": "{ipaddr} via {gwaddr} ",
+      "tooltip-format-disconnected": "Disconnected",
+      "max-length": 50
+  },
+  "custom/bluetooth_devices": {
+    "exec": "$HOME/.config/waybar/custom_modules/bluetooth_devices.sh",
+    "return-type": "json",
+    "format": "{}",
+    "justify": "center",
+    "rotate": 90,
+    "interval": 5,
+    "on-click": "blueman-manager"
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "active": "",
+      "urgent": "",
+      "default": ""
+    }
+  },
+
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format-icons": {
+    }
+  },
+  "clock": {
+    "tooltip": true,
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%Y-%m-%d}",
+  },
+  "tray": {
+    "icon-size": 18,
+    "show-passive-items": "true"
+  },
+  "pulseaudio": {
+    "rotate": 90,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "MUTE ",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
     },
-    "sway/mode": {
-        "format": "󰩨"
-    },
-    "battery": {
-        "format": "{icon}",
-        "format-alt": "{time}  {icon}",
-        "tooltip-format": "{time}",
-        "format-alt-click": "click-right",
-        "format-icons": ["󰁺", "󰁼", "󰁿", "󰁹"],
-        "format-charging": "󰚥",
-        "interval": 30,
-        "on-click": "gnome-control-center power",
-        "states": {
-            "warning": 50,
-            "critical": 20
-        }
-    },
-    "network": {
-        "format": "{icon}",
-        "format-icons": {
-            "wifi": [""],
-            "ethernet": ["󰈀"],
-            "disconnected": ["󰖪"]
-        },   
-        "format-alt-click": "click-right",
-        "format-wifi": "",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "󰖪", 
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "tooltip-format-wifi": "    {essid} \n{ipaddr} {signalStrength}%",
-        "tooltip-format-ethernet": "{ifname} {ipaddr} 󰈀",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click": "gnome-control-center network",
-        "tooltip": true
-    },
-    "backlight": {
-           "device": "intel_backlight",
-           "format": "{icon}",
-           "format-icons": ["󰃞", "󰃝", "󰃠"],
-           "on-scroll-up": "exec brightnessctl set 5%+",
-           "on-scroll-down": "brightnessctl set 5%-",
-           "states": {
-               "low": 0,
-               "mid": 50,
-               "high": 75
-           },
-           "smooth-scrolling-threshold": 1.0,
-       },
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-alt-click": "click-right",
-        "format-bluetooth": "󰂰",
-        "format-muted": "󰝟",
-        "format-icons": {
-            "headphone": "󰋋",
-            "default": ["", ""]
-        },
-        "tooltip-format": "{volume}",
-        "scroll-step": 10,
-        "on-click": "~/.config/waybar/custom/pulseaudio.sh",
-        "states": {
-            "low": 0,
-            "mid": 50,
-            "high": 100
-        },
-        "smooth-scrolling-threshold": 1.0,
-    },
-    "cpu": {
-        "interval": 10,
-        "format": "󰍛",
-        "format-alt-click": "click-right",
-        "on-click": "~/.config/waybar/custom/stats.sh cpu",
-        "states": {
-            "low": 0,
-            "mid": 25,
-            "high": 50
-        }
-    },
-    "memory": {
-        "interval": 30,
-        "format": "",
-        "tooltip-format": "{used:0.1f}G used\n{avail:0.1f}G available\n{total:0.1f}G total",
-        "format-alt-click": "click-right",
-        "on-click": "~/.config/waybar/custom/stats.sh memory",
-        "states": {
-            "low": 0,
-            "mid": 50,
-            "high": 75
-        }
-    },
-    "disk": {
-        "interval": 30,
-        "format": "󰋊",
-        "format-alt-click": "click-right",
-        "tooltip-format": "{used} used\n{free} free\n{total} total",
-        "on-click": "~/.config/waybar/custom/disk_stats.sh",
-        "path": "/",
-        "states": {
-            "low": 0,
-            "mid": 25,
-            "high": 50
-        }
-    },
-    "custom/vm": {
-        "format": "",
-        "interval": 10,
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/kvm-monitor.sh",
-        "on-click": "~/.config/waybar/custom/kvm.sh"
-    },
-    "custom/containers": {
-        "format": "",
-        "interval": 10,
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/containers-monitor.sh",
-    },
-    "custom/bluelightfilter": {
-        "format": "󱩌",
-        "interval": 10,
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/bluelightfilter-monitor.sh",
-        "on-click": "~/.config/waybar/custom/bluelightfilter-toggle.sh",
-        "signal": 8
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰛐"
-        }
-    },
+  	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+	  	]
+	  },
     "custom/notification": {
        "tooltip": false,
        "format": "{icon}",
@@ -165,41 +139,10 @@
        "on-click-right": "swaync-client --close-all",
        "escape": true
      },
-    "tray": {
-      "icon-size": 12,
-      "spacing": 10, 
-    },
-    "custom/spotify-metadata": {
-        "format": "{}  ",
-        "max-length": 60,
-        "interval": 30,
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-        "on-click": "~/.config/waybar/custom/spotify/controls.sh",
-        "on-scroll-up": "~/.config/waybar/custom/spotify/controls.sh next",
-        "on-scroll-down": "~/.config/waybar/custom/spotify/controls.sh previous",
-        "signal": 5,
-        "smooth-scrolling-threshold": 1.0,
-    },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "sort-by-app-id": true,
-        "icon-size": 13,
-        "icon-theme": "Numix-Circle",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-right": "close",
-        "markup": true,
-        "ignore-list": [
-           "kitty"
-        ],
-    },
-    "sway/scratchpad": {
-            "format": "{icon}",
-            "show-empty": false,
-            "format-icons": ["", ""],
-            "icon-size": 7,
-            "tooltip": true,
-            "tooltip-format": "{app}: {title}"
-    },
+
+    "scroll-step": 3,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  }
 }
+
