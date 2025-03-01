@@ -17,7 +17,6 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "custom/bluetooth_devices",
     "custom/sep",
     "pulseaudio",
     "custom/sep",
@@ -48,18 +47,18 @@
       "format-ethernet": "",
       "format-disconnected": "", 
       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-      "tooltip-format-wifi": "{ipaddr} via {gwaddr} ({signalStrength}%) ",
+      "tooltip-format-wifi": "GW: {gwaddr} - ({signalStrength}%) ",
       "tooltip-format-ethernet": "{ipaddr} via {gwaddr} ",
       "tooltip-format-disconnected": "Disconnected",
       "max-length": 50
   },
   "custom/bluetooth_devices": {
     "exec": "$HOME/.config/waybar/custom_modules/bluetooth_devices.sh",
-    "return-type": "json",
+    "return-type": "json",a
     "format": "{}",
     "justify": "center",
     "rotate": 90,
-    "interval": 5,
+    "interval": 5,a
     "on-click": "blueman-manager"
   },
   "hyprland/workspaces": {
