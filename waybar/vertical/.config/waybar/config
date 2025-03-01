@@ -54,11 +54,11 @@
   },
   "custom/bluetooth_devices": {
     "exec": "$HOME/.config/waybar/custom_modules/bluetooth_devices.sh",
-    "return-type": "json",a
+    "return-type": "json",
     "format": "{}",
     "justify": "center",
     "rotate": 90,
-    "interval": 5,a
+    "interval": 5,
     "on-click": "blueman-manager"
   },
   "hyprland/workspaces": {
@@ -83,7 +83,8 @@
   "clock": {
     "tooltip": true,
     "format": "{:%H\n%M}",
-    "tooltip-format": "{:%Y-%m-%d}",
+    "tooltip-format": "{:%d-%m-%Y}",
+    "on-click": "bash ~/.config/.settings/calendar.sh"
   },
   "tray": {
     "icon-size": 18,
@@ -116,7 +117,7 @@
 		"format-icons": [
 			"",
 			"",
-			"",
+			"",a
 			"",
 			""
 	  	]
