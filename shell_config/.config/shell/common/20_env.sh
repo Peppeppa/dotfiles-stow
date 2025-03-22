@@ -1,7 +1,7 @@
 #-----  Environment Variables   -----
 
 # Env
-
+export M_HEADSET="68:59:32:0B:6B:59"
 
 # Programs
 export FETCH_CMD="neofetch" 
