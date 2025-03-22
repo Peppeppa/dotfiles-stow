@@ -2,6 +2,7 @@
 
 # Env
 export M_HEADSET="68:59:32:0B:6B:59"
+export M_BT_BOX="04:21:44:72:B1:08"
 
 # Programs
 export FETCH_CMD="neofetch" 
