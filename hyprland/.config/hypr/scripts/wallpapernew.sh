@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Cache file for holding the current wallpaper

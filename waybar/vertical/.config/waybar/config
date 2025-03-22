@@ -17,7 +17,6 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "custom/sep",
     "pulseaudio",
     "custom/sep",
     "network",
@@ -53,7 +52,7 @@
       "max-length": 50
   },
   "custom/bluetooth_devices": {
-    "exec": "$HOME/.config/waybar/custom_modules/bluetooth_devices.sh",
+    "exec": "$HOME/.config/waybar/scipts/bluetooth_devices.sh",
     "return-type": "json",
     "format": "{}",
     "justify": "center",
@@ -92,8 +91,8 @@
   },
   "pulseaudio": {
     "rotate": 90,
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
     "format-muted": "MUTE ",
     "format-icons": {
       "headphones": "",
@@ -102,16 +101,13 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        ""
-      ]
-    },
-  	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
+      "default": ["",""]
+  },
+  "battery": {
+	"states": {
+		"good": 95,
+		"warning": 30,
+		"critical": 15
 		},
 		"format": "{capacity}% {icon}",
 		"format-icons": [
