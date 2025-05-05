@@ -30,5 +30,4 @@ update() {
   esac
 }
 
-source /home/medvidec/git/eternal-pingdom/ep-toolbox/completions/ep.bash
 
