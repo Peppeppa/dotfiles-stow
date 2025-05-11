@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1C1B19;
+            color: #FCE8C3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #2D2C29;
+            color: #FCE8C3;
+        }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .links a {
+            padding: 10px 15px;
+            background: #3A3A37;
+            color: #68A8E4;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background: #FBB829;
+            color: #1C1B19;
+        }
+        .gif-container {
+            margin-bottom: 20px;
+        }
+        .gif-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="no.gif" alt="Catppuccin Mocha Theme">
+    </div>
+    <div class="search-container">
+        <form action="https://www.duckduckgo.com" method="GET">
+            <input type="text" name="q" placeholder="Suche..." autofocus>
+        </form>
+    </div>
+    <div class="links">
+        <a href="https://chatgpt.com/auth/login?next=/chat">ChatGPT</a>
+        <a href="https://10.1.10.11:8006/">ProxMox</a>
+        <a href="https://calendar.google.com/">Kalender</a>
+        <a href="https://github.com">GitHub</a>
+        <a href="https://10.1.10.10">NAS</a>
+        <a href="https://docs.google.com/spreadsheets/d/1XxqabKdFKRKC-0_CeXRAFt76xuzRlewZ1Je2wx7GN2s/edit?gid=0#gid=0">tegut Zeit</a>
+        <a href="https://www.youtube.com">YouTube</a>
+        <a href="https://github.com/Peppeppa?tab=projects">Projekte</a>
+        <a href="https://www.google.de/maps/">Map</a>
+    </div>
+</body>
+</html>
