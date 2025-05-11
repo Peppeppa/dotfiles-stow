@@ -7,12 +7,21 @@ return {
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    opts = {
-      auto_install = true,
-    },
-  },
+  "williamboman/mason-lspconfig.nvim",
+  lazy = false,
+  config = function()
+  require("mason-lspconfig").setup({
+    ensure_installed = {
+      "tsserver",
+      "solargraph",
+      "html",
+      "ansiblels",
+      "bashls",
+      "lua_ls",
+      },
+      -- automatic_installation = false, -- optional: ganz weglassen oder explizit false setzen
+    })
+    end,
   {
     "neovim/nvim-lspconfig",
     lazy = false,
