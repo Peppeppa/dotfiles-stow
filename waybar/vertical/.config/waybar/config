@@ -46,7 +46,7 @@
       "format-ethernet": "",
       "format-disconnected": "", 
       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-      "tooltip-format-wifi": "GW: {gwaddr} - ({signalStrength}%) ",
+      "tooltip-format-wifi": "{essid} - ({signalStrength}%) ",
       "tooltip-format-ethernet": "{ipaddr} via {gwaddr} ",
       "tooltip-format-disconnected": "Disconnected",
       "max-length": 50
