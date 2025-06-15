@@ -8,13 +8,13 @@ export LOG_MOUSE_X1CARB="D3:31:C1:A3:C1:5C"
 
 
 # Programs
-export FETCH_CMD="neofetch" 
+export FETCH_CMD="fastfetch" 
 export EDITOR=nvim
 export VISUAL=nvim
 
 # Directories
 export REPOS="$HOME/git"
-export DOTFILES="$REPOS/dotfiles-stow"
-export SCRIPTS="$REPOS/scripts"
+export DOTFILES="$REPOS/medvidec/dotfiles-stow"
+export SCRIPTS="$REPOS/medvidec/scripts"
 export DOTCONFIG="$HOME/.config"
-export WALLPAPERS="$REPOS/wallpaper"
+export WALLPAPERS="$REPOS/medvidec/wallpaper"
