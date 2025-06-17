@@ -22,7 +22,4 @@ load_shell_config () {
 }
 
 load_shell_config
-source "/home/medvidec/git/eternal-pingdom/ep-toolkit/completions/ep.bash"
-source "/home/medvidec/git/eternal-pingdom/toolbox/completion/ep"
-source "/home/medvidec/git/eternal-pingdom/toolbox/completion/ep"
 source "/home/medvidec/git/eternal-pingdom/toolbox/completion/ep"

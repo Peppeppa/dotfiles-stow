@@ -38,6 +38,7 @@ alias z='sudo zypper'
 alias t='tmux'
 alias install='sudo pacman -Syu'
 alias deinstall='sudo pacman -Rcns'
+alias h='Hyprland'
 
 #	Git
 
