@@ -5,6 +5,6 @@ copy-on-select = true
 background-opacity = 0.85
 
 font-family = JetBrainsMono Nerd Font
-font-size = 18
+font-size = 16
 
 theme = srcery
