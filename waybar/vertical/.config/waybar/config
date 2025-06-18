@@ -42,6 +42,7 @@
   },
 
   "network": {
+      "on-click": "ghostty -e nmtui",
       "format-wifi": " ",
       "format-ethernet": "",
       "format-disconnected": "", 
