@@ -2,9 +2,9 @@
 mouse-hide-while-typing = true
 copy-on-select = true
 
-background-opacity = 0.7
+background-opacity = 0.85
 
-font-family = FiraMonoNerdFont
+font-family = JetBrainsMono Nerd Font
 font-size = 16
 
 theme = srcery

@@ -2,7 +2,7 @@
 
 #	movement
 #
-alias c='clear && neofetch'
+alias c='clear &&  $FETCH_CMD'
 alias cl='clear && eza -ahl' #--color=auto'
 
 alias ..='cd ..'
@@ -36,7 +36,9 @@ alias r='ranger'
 alias y='yazi'
 alias z='sudo zypper'
 alias t='tmux'
-
+alias install='sudo pacman -Syu'
+alias deinstall='sudo pacman -Rcns'
+alias h='Hyprland'
 
 #	Git
 
