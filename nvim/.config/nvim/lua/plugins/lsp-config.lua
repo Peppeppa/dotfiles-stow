@@ -22,6 +22,7 @@ return {
       -- automatic_installation = false, -- optional: ganz weglassen oder explizit false setzen
     })
     end,
+  },
   {
     "neovim/nvim-lspconfig",
     lazy = false,
