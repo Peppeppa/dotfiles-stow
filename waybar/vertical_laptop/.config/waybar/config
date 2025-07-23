@@ -1,0 +1,144 @@
+{
+  "output": "eDP-1",
+  "layer": "top",
+  "position": "right",
+  "width": 28,
+  "margin": "2 0 2 2",
+  "spacing": 2,
+  "modules-left": [
+    "clock",
+    "custom/sep",
+    "idle_inhibitor",
+    "custom/sep",
+    "custom/notification",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "custom/sep",
+    "network",
+    "custom/sep",
+  	"battery",
+    "custom/powermenu"
+  ],
+  "custom/sep": {
+    //    "format": "──"
+    "format": ""
+  },
+  "custom/powermenu": {
+    "on-click": "wlogout",
+    "format": "",
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
+    }
+  },
+
+  "network": {
+      "on-click": "ghostty -e nmtui",
+      "format-wifi": " ",
+      "format-ethernet": "",
+      "format-disconnected": "", 
+      "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+      "tooltip-format-wifi": "{essid} - ({signalStrength}%) ",
+      "tooltip-format-ethernet": "{ipaddr} via {gwaddr} ",
+      "tooltip-format-disconnected": "Disconnected",
+      "max-length": 50
+  },
+  "custom/bluetooth_devices": {
+    "exec": "$HOME/.config/waybar/scipts/bluetooth_devices.sh",
+    "return-type": "json",
+    "format": "{}",
+    "justify": "center",
+    "rotate": 90,
+    "interval": 5,
+    "on-click": "blueman-manager"
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "active": "",
+      "urgent": "",
+      "default": ""
+    }
+  },
+
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format-icons": {
+    }
+  },
+  "clock": {
+    "tooltip": true,
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%d-%m-%Y}",
+    "on-click": "bash ~/.config/.settings/calendar.sh"
+  },
+  "tray": {
+    "icon-size": 18,
+    "show-passive-items": "true"
+  },
+  "pulseaudio": {
+    "rotate": 90,
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-muted": "MUTE ",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["",""]
+  },
+  "battery": {
+	"states": {
+		"good": 95,
+		"warning": 30,
+		"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+	  	]
+	  },
+    "custom/notification": {
+       "tooltip": false,
+       "format": "{icon}",
+       "format-icons": {
+         "notification": "",
+         "none": " ",
+         "dnd-notification": "",
+         "dnd-none": " "
+       },
+       "return-type": "json",
+       "exec-if": "which swaync-client",
+       "exec": "swaync-client -swb",
+       "on-click": "swaync-client -t -sw",
+       "on-click-right": "swaync-client --close-all",
+       "escape": true
+     },
+
+    "scroll-step": 3,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  }
+}
+
