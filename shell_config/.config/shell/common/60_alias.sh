@@ -23,7 +23,8 @@ alias dot='cd $DOTFILES'
 alias scripts='cd $SCRIPTS'
 alias conf='cd $DOTCONFIG'
 alias untar='tar -xvf'
-
+alias pkg-install='~/.config/hypr/scripts/hypr-pkg-install.sh'
+alias pkg-remove='~/.config/hypr/scripts/hypr-pkg-remove.sh'
 
 
 #	systemalias
@@ -36,8 +37,6 @@ alias r='ranger'
 alias y='yazi'
 alias z='sudo zypper'
 alias t='tmux'
-alias install='sudo pacman -Syu'
-alias deinstall='sudo pacman -Rcns'
 alias h='Hyprland'
 
 #	Git

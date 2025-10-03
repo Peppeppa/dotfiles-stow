@@ -13,8 +13,8 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # Directories
-export REPOS="$HOME/git"
-export DOTFILES="$REPOS/medvidec/dotfiles-stow"
-export SCRIPTS="$REPOS/medvidec/scripts"
+export REPOS="$HOME/repos"
+export DOTFILES="$REPOS/peppeppa/dotfiles-stow"
+export SCRIPTS="$REPOS/peppeppa/scripts"
 export DOTCONFIG="$HOME/.config"
-export WALLPAPERS="$REPOS/medvidec/wallpaper"
+export WALLPAPERS="$REPOS/peppeppa/wallpaper"

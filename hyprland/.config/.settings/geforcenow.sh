@@ -1,2 +1,2 @@
-thorium-browser --app=https://play.geforcenow.com/mall/#/layout/games
+chromium --app=https://play.geforcenow.com/mall/#/layout/games
 
