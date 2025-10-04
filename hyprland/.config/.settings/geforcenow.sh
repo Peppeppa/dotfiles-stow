@@ -1,2 +1,2 @@
-chromium --app=https://play.geforcenow.com/mall/#/layout/games
+firefox --new-window https://play.geforcenow.com/mall/#/layout/games \
 
