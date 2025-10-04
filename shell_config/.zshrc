@@ -24,3 +24,5 @@ load_shell_config
 
 
 source /home/medvidec/git/eternal-pingdom/toolbox/completion/ep
+
+. "$HOME/.local/share/../bin/env"
