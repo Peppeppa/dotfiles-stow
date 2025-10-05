@@ -1,2 +1,2 @@
-firefox --new-window https://play.geforcenow.com/mall/#/layout/games \
+thorium --app=https://play.geforcenow.com/mall/#/layout/games \
 

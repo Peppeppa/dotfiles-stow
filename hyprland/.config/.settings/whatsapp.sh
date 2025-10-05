@@ -1,2 +1,2 @@
-chromium --app=https://web.whatsapp.com
+thorium --app=https://web.whatsapp.com
 

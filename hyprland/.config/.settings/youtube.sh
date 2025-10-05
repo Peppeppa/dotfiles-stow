@@ -1,1 +1,1 @@
-chromium --ozone-platform=wayland --app=https://youtube.com
+thorium --app=https://youtube.com

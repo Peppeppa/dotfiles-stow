@@ -1,2 +1,1 @@
-
-firefox --app=https://github.com/
+thorium --app=https://github.com/
