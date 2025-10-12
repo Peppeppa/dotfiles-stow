@@ -18,3 +18,7 @@ export DOTFILES="$REPOS/peppeppa/dotfiles-stow"
 export SCRIPTS="$REPOS/peppeppa/scripts"
 export DOTCONFIG="$HOME/.config"
 export WALLPAPERS="$REPOS/peppeppa/wallpaper"
+
+export DERBY_HOME=/opt/derby
+export PATH=$PATH:$DERBY_HOME/bin
+
