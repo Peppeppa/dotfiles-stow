@@ -42,7 +42,7 @@
   },
 
   "network": {
-      "on-click": "ghostty -e nmtui",
+      "on-click": "/usr/bin/impala",
       "format-wifi": " ",
       "format-ethernet": "",
       "format-disconnected": "", 

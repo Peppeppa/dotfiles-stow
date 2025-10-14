@@ -1,0 +1,14 @@
+Sun Oct 12 15:34:53 CEST 2025 : Apache Derby Network Server 10.17.1.0 - (1913217) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+----------------------------------------------------------------
+Sun Oct 12 15:37:39 CEST 2025:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): Instanz a816c00e-0199-d8a1-99f2-00003e7f8258
+für Datenbankverzeichnis /home/medvidec/repos/peppeppa/dotfiles-stow/testdb mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@341d43cd
+Geladen aus file:/opt/derby/lib/derby.jar
+java.vendor=Arch Linux
+java.runtime.version=25.0.1
+user.dir=/home/medvidec/repos/peppeppa/dotfiles-stow
+os.name=Linux
+os.arch=amd64
+os.version=6.16.10-arch1-1
+derby.system.home=null
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
