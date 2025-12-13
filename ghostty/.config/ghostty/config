@@ -9,8 +9,3 @@ font-size = 16
 
 theme = Srcery
 
-disable-renderer-vsync = true
-renderer = "vulkan"
-font-features = false
-scrollback-unlimited = false
-
