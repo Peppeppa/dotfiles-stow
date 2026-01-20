@@ -37,7 +37,7 @@ alias r='ranger'
 alias y='yazi'
 alias z='sudo zypper'
 alias t='tmux'
-alias h='Hyprland'
+alias h='start-hyprland'
 
 #	Git
 
